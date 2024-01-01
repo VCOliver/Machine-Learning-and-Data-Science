@@ -21,3 +21,5 @@ X_credit = base_credit.iloc[:, 1:4].values
 Y_credit = base_credit.iloc[:, 4].values
 
 scaler_credit = StandardScaler()
+X_credit = scaler_credit.fit_transform(X_credit) # Standardizing data
+print(X_credit[:,0].min())
